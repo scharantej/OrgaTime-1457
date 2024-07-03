@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Schedule</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Your Schedule</h1>
+
+<table>
+<thead>
+<tr>
+<th>Task Name</th>
+<th>Deadline</th>
+<th>Time Slots</th>
+</tr>
+</thead>
+<tbody>
+{% for task in tasks %}
+<tr>
+<td>{{ task.name }}</td>
+<td>{{ task.deadline }}</td>
+<td>{{ task.time_slots }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+</body>
+</html>
+
